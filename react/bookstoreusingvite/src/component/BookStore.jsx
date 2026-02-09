@@ -8,6 +8,7 @@ function Bookstore() {
         alignItems: "center",
         marginTop: "20px",
         borderRadius:"5px"
+        
     }
     
     const bookjson=[{

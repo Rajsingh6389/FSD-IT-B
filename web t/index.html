@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .mainframe{
+        background-color:gold ;
+        display: flex;
+    }
+</style>    
+<body>
+    <frameset rows="20%,20%,*" class="mainframe">
+        <frame>Tutorial Website</frame>
+        <frame >
+            <frameset cols="25%,25%,25%,25%">
+                <frame><a href="content.html" target="content">Content</a></frame>
+                <frame><a href="exercise.html" target="content">Exercices</a></frame>
+                <frame><a href="quizzes.html" target="content">Quizzes</a></frame>
+                <frame><a href="bookreference.html" target="content">Book Reference</a></frame>
+            </frameset>
+        </frame>
+        <frame >
+            <iframe src="" id="content">Content</iframe>
+        </frame>
+
+        
+    </frameset>
+    
+</body>
+</html>

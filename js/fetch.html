@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTM Dom Example</title>
+    <script>
+      
+      
+      function addpara() {
+        const id = document.querySelectorAll("div");
+        id.forEach((id1) => {
+          const para = document.createElement("p");
+          para.textContent = "This is new Paragraph";
+          para.style.color = "Green";
+          id1.appendChild(para);
+          console.log(id1);
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="addpara()">Add Para</button>
+    <p>This is old paragraph</p>
+    <div id="para1"></div>
+    <div id="para1"></div>
+    <div id="para1"></div>
+  </body>
+</html>

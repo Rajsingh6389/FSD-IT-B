@@ -59,9 +59,65 @@ const fs=require('fs')
 // const result=fs.readFileSync("./abes.text","utf8")
 // console.log(result);
 
-fs.appendFileSync("./ad.txt",`and i am monotonous`)
-fs.writeFile("./a1.txt","hello everyone",()=>{});
-fs.writeFile("./a2.text","",()=>{})
-fs.cp("./a1.txt","./a2.txt",()=>{})
+// fs.appendFileSync("./ad.txt",`and i am monotonous`)
+// fs.writeFile("./a1.txt","hello everyone",()=>{});
+// fs.writeFile("./a2.text","",()=>{})
+// fs.cp("./a1.txt","./a2.txt",()=>{})
 
-fs.unlinkSync("./abes.text")
+// fs.unlinkSync("./abes.text")
+
+// fs.mkdir("node_js/class.txt",(err)=>{
+//    if(err) throw err
+//    console.log("folder created successfully");
+    
+// })
+
+
+// fs.readdir('node_js/class.txt', (err, files) => {
+//     if (err) throw err;
+//     console.log(files);
+// });
+
+// fs.appendFile("node_js/class.txt/11-02-2006.txt","\nhello world",(err)=>{
+//     if(err) throw err
+//     console.log("data appended successfully");
+// })
+// const newUser = {
+//     id: 4,
+//     name: "c",
+//     role: "Frontend Developer"
+// };
+// fs.readFile('node_js/data.json', 'utf8', (err, data) => {
+//     if (err) throw err;
+
+//     const users = JSON.parse(data);   // string → object
+//     console.log(users);
+//     users.push(newUser)
+//     fs.writeFile("node_js/data.json",JSON.stringify(users),(err)=>{
+//         if(err) throw err
+//         console.log("User added");
+//     })
+// });
+// const os=require('os')
+// console.log(os.platform());
+// console.log(os.userInfo());
+// console.log(os.arch());
+// console.log("freemem" , os.freemem());
+// console.log(os.totalmem());
+// console.log(os.uptime());
+// console.log(os.homedir());
+
+
+const http = require("http");
+
+const home = fs.readFileSync("C:/FSD/IT_B-Full-Stack-Development/node_js/abes.html");
+
+const myserver = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader("Content-Type", "text/html");
+  res.end(home);
+});
+
+myserver.listen(8000, () => {
+  console.log("Server running on port 8000");
+});

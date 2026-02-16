@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile Store</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container{
+            background-color: aqua;
+            width: 700px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        img{
+            height: 120px;
+            width: 120px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        img:hover{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Mobile Store</h1>
+
+<div class="container">
+
+    <img src="https://rukminim2.flixcart.com/fk-p-flap/3140/1400/image/2713e43bb6a00ff2.png?q=60"
+         onclick="openPage('/mobile1')">
+
+    <img src="https://rukminim2.flixcart.com/fk-p-flap/760/1080/image/00060ea8949f5235.png?q=60"
+         onclick="openPage('/mobile2')">
+
+    <img src="https://rukminim2.flixcart.com/fk-p-flap/760/1080/image/942b14fd4d7b5741.png?q=60"
+         onclick="openPage('/mobile3')">
+
+    <img src="https://rukminim2.flixcart.com/fk-p-flap/760/1080/image/c692ab92ba564410.png?q=60"
+         onclick="openPage('/mobile4')">
+
+</div>
+
+<script>
+    function openPage(route){
+        window.location.href = route;
+    }
+</script>
+
+</body>
+</html>

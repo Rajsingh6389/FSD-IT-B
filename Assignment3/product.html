@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Info</title>
+
+    <style>
+        body{
+            font-family: Arial;
+        }
+
+        .product{
+            width: 800px;
+            margin: 40px auto;
+            display: flex;
+            gap: 40px;
+        }
+
+        img{
+            width: 300px;
+        }
+
+        h2{
+            color: #2874f0;
+        }
+
+        button{
+            background: #fb641b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="product">
+    <img id="img">
+    <div>
+        <h2 id="name"></h2>
+        <h3 id="price"></h3>
+        <ul id="features"></ul>
+        <button>Buy Now</button><br><br>
+        <a href="index.html">⬅ Back</a>
+    </div>
+</div>
+
+<script>
+    const data = {
+        mobile1:{
+            name:"Samsung Galaxy S23",
+            price:"₹69,999",
+            img:"https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/s23.jpg",
+            features:["8GB RAM","256GB Storage","50MP Camera","5G"]
+        },
+        mobile2:{
+            name:"iPhone 14",
+            price:"₹79,999",
+            img:"https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/iphone14.jpg",
+            features:["A15 Bionic","128GB Storage","12MP Camera","iOS"]
+        },
+        mobile3:{
+            name:"OnePlus 11",
+            price:"₹56,999",
+            img:"https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/oneplus11.jpg",
+            features:["Snapdragon 8 Gen 2","100W Charging","5G"]
+        },
+        mobile4:{
+            name:"Redmi Note 13 Pro",
+            price:"₹24,999",
+            img:"https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/redmi.jpg",
+            features:["200MP Camera","AMOLED","5G"]
+        }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const mobile = params.get("mobile");
+
+    document.getElementById("name").innerText = data[mobile].name;
+    document.getElementById("price").innerText = data[mobile].price;
+    document.getElementById("img").src = data[mobile].img;
+
+    const ul = document.getElementById("features");
+    data[mobile].features.forEach(f=>{
+        const li = document.createElement("li");
+        li.innerText = f;
+        ul.appendChild(li);
+    });
+</script>
+
+</body>
+</html>
